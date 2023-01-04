@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <form>
+            <label for="celsius">Celsius</label><br>
+            <input type="text"id="celsius" onkeyup="C2F(this.value)"><br>
+            <label for="Farhenheit">Farhenheit</label><br>
+            <input type="text" id="farhenheit" onkeyup="F2C(this.value)"><br>
+        </form>
+
+    <script>
+        let C2F = (value) => {
+            document.getElementById("farhenheit").value = value*9/5 + 32;
+        }
+        let F2C = (value) => {
+            document.getElementById("celsius").value = (value-32)*5/9;
+        }
+    </script>
+</body>
+</html>
